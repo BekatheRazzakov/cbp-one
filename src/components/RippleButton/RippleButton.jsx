@@ -3,7 +3,8 @@ import "./rippleButton.css";
 
 const RippleButton = ({
   style,
-  children
+  children,
+  ...rest
 }) => {
   const [ripples, setRipples] = useState([]);
   
@@ -50,6 +51,7 @@ const RippleButton = ({
       style={style}
       onMouseDown={createRipple}
       onTouchStart={createRipple}
+      {...rest}
     >
       {children}
       {ripples.map((ripple) => (

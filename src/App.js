@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Unauthorized from "./containers/Unauthorized/Unauthorized";
 import './App.css';
 import './tailwind.css';
+import TermsAndConditions
+  from "./containers/TermsAndConditions/TermsAndConditions";
 
 function App() {
   return (
@@ -17,6 +19,10 @@ function App() {
         <Route
           path='unauthorized'
           element={<Unauthorized/>}
+        />
+        <Route
+          path='terms-and-conditions'
+          element={<TermsAndConditions/>}
         />
       </Routes>
     </div>
