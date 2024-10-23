@@ -1,0 +1,62 @@
+.unauthorized {
+  background-image: url("../../assets/bg-sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+}
+
+.unauthorized-paper {
+  position: relative;
+  background-color: #FFFFFF;
+  border-top: 5px solid #d62d2d;
+  flex-grow: 0;
+}
+
+.unauthorized-paper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: -35px auto 0;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../assets/cbp_seal.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.unauthorized-paper-inner-bg {
+  width: 95%;
+  aspect-ratio: 1/0.88;
+  background-image: url("../../assets/unauthorized-inner-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 40px auto 0;
+}
+
+.unauthorized-login-btn {
+  display: block;
+  background-color: #d62d2d;
+  color: white;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 30px auto 0;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.unauthorized-login-btn + img {
+  width: 50%;
+  margin: 10px auto 20px;
+}
+
+.unauthorized-paper + span {
+  display: block;
+  text-align: right;
+  margin: 0 auto;
+  width: 90%;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 500;
+}
