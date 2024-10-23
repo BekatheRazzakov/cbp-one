@@ -12,10 +12,6 @@
   transition: 0.1s;
 }
 
-.ripple-button:hover {
-  background: rgba(18, 79, 131, 0.1);
-}
-
 .ripple-button:focus {
   outline: none;
 }
