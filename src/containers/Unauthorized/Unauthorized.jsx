@@ -8,7 +8,7 @@ const Unauthorized = () => {
   const navigate = useNavigate();
   
   return (
-    <div className='unauthorized h-dvh flex justify-center items-center'>
+    <div className='unauthorized h-dvh flex justify-center items-center relative'>
       <div className='unauthorized-top-info'>
         <img
           src={usaFlag}
