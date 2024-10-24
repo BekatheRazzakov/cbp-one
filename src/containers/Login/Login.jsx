@@ -5,8 +5,8 @@ import './login.css';
 
 const Login = () => {
   return (
-    <div className='login'>
-      <div className='login-header'>
+    <div className='login flex flex-col items-center'>
+      <div className='login-header w-dvw'>
         <div className='login-top-header'>
           <img
             src={usaFlag}
@@ -26,6 +26,10 @@ const Login = () => {
             alt='login.gov'
           />
         </div>
+      </div>
+      <div className='login-info'>
+        For your security, we clear what you entered if you don't move to a new
+        page within 15 minutes.
       </div>
     </div>
   );
