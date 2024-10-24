@@ -13,7 +13,7 @@ const TermsAndConditions = () => {
           className='terms-and-conditions-page-back'
           onClick={() => navigate('/unauthorized')}
         />
-        <h1 className='text-xl text-center'>Terms & Conditions</h1>
+        <h1 className='text-md font-medium text-center'>Terms & Conditions</h1>
       </div>
       <div className='terms-and-conditions-header-info flex flex-col'>
         <div className='terms-and-conditions-info-text'>
