@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import loginGovImg from '../../assets/login-gov.png';
 import { useNavigate } from "react-router-dom";
 import usaFlag from '../../assets/usaFlag.png';
 import './unauthorized.css';
+import Loader from "../../components/Loader/Loader";
 
 const Unauthorized = () => {
   const navigate = useNavigate();
+  const [showLoader, setShowLoader] = useState(false);
+  
+  useEffect(() => {
+    return () => setShowLoader(false);
+  }, []);
   
   return (
     <div className='unauthorized h-dvh flex justify-center items-center relative'>
@@ -23,7 +29,10 @@ const Unauthorized = () => {
         <span className='block text-center text-xs font-light leading-4 mt-2 mr-6 ml-6'>A single portal to multiple CBP services to streamline your experience.</span>
         <button
           className='unauthorized-login-btn'
-          onClick={() => navigate('/terms-and-conditions')}
+          onClick={() => {
+            setShowLoader(true);
+            setTimeout(() => navigate('/terms-and-conditions'), 3000);
+          }}
         >Login or sign up
         </button>
         <img
@@ -32,6 +41,7 @@ const Unauthorized = () => {
         />
       </div>
       <span>2.73.0</span>
+      {showLoader && <Loader/>}
     </div>
   );
 };

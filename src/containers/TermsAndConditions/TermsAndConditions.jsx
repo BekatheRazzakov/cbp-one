@@ -1,10 +1,16 @@
-import React from 'react';
-import './termsAndConditions.css';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import RippleButton from "../../components/RippleButton/RippleButton";
+import Loader from "../../components/Loader/Loader";
+import './termsAndConditions.css';
 
 const TermsAndConditions = () => {
   const navigate = useNavigate();
+  const [showLoader, setShowLoader] = useState(false);
+  
+  useEffect(() => {
+    return () => setShowLoader(false);
+  }, []);
   
   return (
     <div className='terms-and-conditions'>
@@ -179,7 +185,12 @@ const TermsAndConditions = () => {
       <div className='terms-and-conditions-footer'>
         <div className='terms-and-conditions-footer-btns'>
           <RippleButton onClick={() => navigate('/unauthorized')}>DECLINE</RippleButton>
-          <RippleButton onClick={() => navigate('/login')}>ACCEPT</RippleButton>
+          <RippleButton
+            onClick={() => {
+              setShowLoader(true);
+              setTimeout(() => navigate('/login'), 3000)
+            }}
+          >ACCEPT</RippleButton>
         </div>
         <div className='terms-and-conditions-footer-bottom'>
           <a href='https://www.cbp.gov/document/directives/vulnerability-disclosure-program-policy-and-rules-engagement'>Vulnerability
@@ -188,6 +199,7 @@ const TermsAndConditions = () => {
             Reduction</a>
         </div>
       </div>
+      {showLoader && <Loader/>}
     </div>
   );
 };
