@@ -179,7 +179,7 @@ const TermsAndConditions = () => {
       <div className='terms-and-conditions-footer'>
         <div className='terms-and-conditions-footer-btns'>
           <RippleButton onClick={() => navigate('/unauthorized')}>DECLINE</RippleButton>
-          <RippleButton onClick={() => {}}>ACCEPT</RippleButton>
+          <RippleButton onClick={() => navigate('/login')}>ACCEPT</RippleButton>
         </div>
         <div className='terms-and-conditions-footer-bottom'>
           <a href='https://www.cbp.gov/document/directives/vulnerability-disclosure-program-policy-and-rules-engagement'>Vulnerability

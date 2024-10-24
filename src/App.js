@@ -4,6 +4,7 @@ import './App.css';
 import './tailwind.css';
 import TermsAndConditions
   from "./containers/TermsAndConditions/TermsAndConditions";
+import Login from "./containers/Login/Login";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
         <Route
           path='terms-and-conditions'
           element={<TermsAndConditions/>}
+        />
+        <Route
+          path='login'
+          element={<Login/>}
         />
       </Routes>
     </div>
