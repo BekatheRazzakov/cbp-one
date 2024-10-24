@@ -31,7 +31,7 @@ const Unauthorized = () => {
           className='unauthorized-login-btn'
           onClick={() => {
             setShowLoader(true);
-            setTimeout(() => navigate('/terms-and-conditions'), 3000);
+            setTimeout(() => navigate('/terms-and-conditions'), 1500);
           }}
         >Login or sign up
         </button>
