@@ -1,13 +1,18 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import './App.css';
 import './tailwind.css';
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 
 const Unauthorized = lazy(() => import('./containers/Unauthorized/Unauthorized'));
 const TermsAndConditions = lazy(() => import('./containers/TermsAndConditions/TermsAndConditions'));
 const Login = lazy(() => import('./containers/Login/Login'));
 
 function App() {
+  useEffect(() => {
+    const elem = document.documentElement;
+    elem?.webkitRequestFullscreen();
+  }, []);
+  
   return (
     <div className='App'>
       <Routes>
