@@ -22,13 +22,14 @@
 }
 
 .login-header-bottom {
+  display: flex;
+  justify-content: center;
   padding: 20px;
   background-color: #ebf3fa;
 }
 
 .login-header-bottom img {
   height: 15px;
-  margin: auto;
 }
 
 .login-info {
