@@ -1,6 +1,7 @@
 import React from 'react';
 import loginGovImg from '../../assets/login-gov.png';
 import { useNavigate } from "react-router-dom";
+import usaFlag from '../../assets/usaFlag.png';
 import './unauthorized.css';
 
 const Unauthorized = () => {
@@ -8,6 +9,13 @@ const Unauthorized = () => {
   
   return (
     <div className='unauthorized h-dvh flex justify-center items-center'>
+      <div className='unauthorized-top-info'>
+        <img
+          src={usaFlag}
+          alt='USA'
+        />
+        <span>Official App of the U.S. Department of Homeland Security</span>
+      </div>
       <div className='unauthorized-paper mr-11 ml-11 rounded-md'>
         <div className='unauthorized-paper-inner-bg'></div>
         <h1 className='text-xl font-light text-center'>Welcome to CBP
@@ -23,7 +31,7 @@ const Unauthorized = () => {
           alt='login.gov'
         />
       </div>
-      <span>2.67.0</span>
+      <span>2.73.0</span>
     </div>
   );
 };
